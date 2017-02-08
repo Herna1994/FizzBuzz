@@ -2,12 +2,17 @@ import java.util.Scanner;
 
 public class FizzBuzz {
 
-	public static void main(String[] args) {
-	    Scanner leer = new Scanner(System.in);
-	    System.out.println("Introduce el numero: ");
+	public static void main(String[] args) {		
+            Scanner leer = new Scanner(System.in);
+            System.out.println("Introduce el numero: ");
 	    int numero = leer.nextInt();
 	    int decenas = calcularDecenas(numero);
 	    int unidades = calcularUnidades(numero, decenas);
+	    
+	    if (numero < 0 || numero > 100) {
+	    	System.out.println("Número inválido, ¡que pase un buen día!");
+	    	System.exit(0);
+	    }
 	    
 	    if (numero % 3 == 0 && numero % 5 == 0) {
 	      System.out.println("FizzBuzz");
@@ -20,7 +25,7 @@ public class FizzBuzz {
 	        makeFizzBuzz(numero, decenas, unidades);
 	      }
 	    }
-	  }
+	 }
 
 	  public static void makeFizzBuzz(int numero, int decenas, int unidades){
 	    String u[]={"","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
