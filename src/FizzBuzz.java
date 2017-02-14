@@ -4,7 +4,7 @@ public class FizzBuzz {
 
 	public static void main(String[] args) {		
             Scanner leer = new Scanner(System.in);
-            System.out.println("Introduce el numero: ");
+            System.out.println("Introduce un numero entre el 1 y el 100: ");
 	    int numero = leer.nextInt();
 	    int decenas = calcularDecenas(numero);
 	    int unidades = calcularUnidades(numero, decenas);
